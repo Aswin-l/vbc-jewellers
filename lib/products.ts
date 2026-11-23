@@ -1,0 +1,18 @@
+export type ProductCategory = 'Necklaces' | 'Earrings' | 'Chains' | 'Bangles' | 'Rings' | 'Silver' | 'Gifting';
+export type Product = { id:string; slug:string; name:string; category:ProductCategory; image:string; description:string; tag?:string; metal:string; occasion:string };
+export const products: Product[] = [
+ {id:'vbc-001',slug:'heritage-temple-necklace',name:'Heritage Temple Necklace',category:'Necklaces',image:'/images/temple-necklace.jpg',description:'A statement temple-inspired necklace with intricate traditional detailing.',tag:'Signature',metal:'Gold jewellery · Details on enquiry',occasion:'Wedding & festive'},
+ {id:'vbc-002',slug:'bridal-antique-set',name:'Antique Bridal Set',category:'Necklaces',image:'/images/bridal-set.jpg',description:'A rich bridal look, designed to make every celebration memorable.',tag:'Bridal edit',metal:'Gold jewellery · Details on enquiry',occasion:'Bridal'},
+ {id:'vbc-003',slug:'classic-gold-chain',name:'Classic Gold Chain',category:'Chains',image:'/images/gold-chain.jpg',description:'An elegant everyday chain with a timeless finish.',metal:'Gold jewellery · Details on enquiry',occasion:'Everyday'},
+ {id:'vbc-004',slug:'traditional-jhumkas',name:'Traditional Jhumkas',category:'Earrings',image:'/images/jhumkas.jpg',description:'Traditional drop earrings with detailed craftsmanship.',tag:'Bestseller',metal:'Gold jewellery · Details on enquiry',occasion:'Festive'},
+ {id:'vbc-005',slug:'ruby-gold-earrings',name:'Ruby Accent Earrings',category:'Earrings',image:'/images/earrings.jpg',description:'A colourful traditional pair for special occasions.',metal:'Gold jewellery · Details on enquiry',occasion:'Celebrations'},
+ {id:'vbc-006',slug:'long-temple-necklace',name:'Long Temple Necklace',category:'Necklaces',image:'/images/long-necklace.jpg',description:'A classic long necklace inspired by South Indian heritage.',metal:'Gold jewellery · Details on enquiry',occasion:'Wedding & festive'},
+ {id:'vbc-007',slug:'heritage-pendant',name:'Heritage Pendant',category:'Chains',image:'/images/pendants.jpg',description:'A detailed pendant design to pair with your favourite chain.',tag:'Curated pick',metal:'Gold jewellery · Details on enquiry',occasion:'Everyday & festive'},
+ {id:'vbc-008',slug:'traditional-bangles',name:'Traditional Bangles',category:'Bangles',image:'/images/bangles.jpg',description:'A traditional bangle selection with ornate detailing.',metal:'Gold jewellery · Details on enquiry',occasion:'Wedding'},
+ {id:'vbc-009',slug:'classic-gold-ring',name:'Classic Gold Ring',category:'Rings',image:'/images/rings.jpg',description:'A timeless ring design for everyday elegance.',metal:'Gold jewellery · Details on enquiry',occasion:'Everyday'},
+ {id:'vbc-010',slug:'silver-pooja-collection',name:'Silver Pooja Collection',category:'Silver',image:'/images/silverware.jpg',description:'Traditional silver pieces for your home and auspicious occasions.',metal:'Silver articles · Details on enquiry',occasion:'Pooja & gifting'},
+ {id:'vbc-011',slug:'gold-coin-collection',name:'Gold Coin Collection',category:'Gifting',image:'/images/gold-coin.jpg',description:'A thoughtful traditional gifting choice. Ask in store for available weights.',metal:'Gold · Details on enquiry',occasion:'Gifting'},
+ {id:'vbc-012',slug:'necklace-showcase',name:'Classic Necklace Edit',category:'Necklaces',image:'/images/necklace-display.jpg',description:'A curated necklace style from the VBC collection.',metal:'Gold jewellery · Details on enquiry',occasion:'Festive'}
+];
+export const categories = ['All','Necklaces','Earrings','Chains','Bangles','Rings','Silver','Gifting'] as const;
+export const getProduct = (slug:string) => products.find((product)=>product.slug===slug);

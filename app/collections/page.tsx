@@ -1,0 +1,3 @@
+import type {Metadata} from 'next'; import CollectionsBrowser from '@/components/CollectionsBrowser';
+export const metadata:Metadata={title:'Collections'};
+export default function Collections(){return <div className="page-shell"><section className="page-hero"><span className="eyebrow">A CURATED SELECTION · VBC</span><h1>Find the piece<br/><em>that feels like you.</em></h1><p>Explore traditional favourites and timeless designs, selected for every kind of occasion.</p></section><section className="catalog-section"><div className="catalog-top"><span>THE VBC COLLECTION</span><span>12 CURATED DESIGNS</span></div><CollectionsBrowser/></section></div>}
